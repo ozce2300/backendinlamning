@@ -27,6 +27,28 @@ header {
 }
 
 
+main {
+    grid-area: m;
+}
+
+input {
+    padding: 10px;
+}
+
+#container-form {
+    margin-top:30px;
+    display: flex;
+    max-width: 800px;
+}
+
+form {
+    display: flex;
+    margin:0 auto;
+    width: 80%;
+    flex-direction: column;
+}
+
+
 .logo a {
     color: rgb(255, 255, 255);
     font-size: 0.8em;
@@ -186,12 +208,3 @@ main p {
         padding: 1.2em 0;
     }
 }
-
-main {
-    grid-area: m;
-}
-
-footer {
-    grid-area: f;
-}
-
