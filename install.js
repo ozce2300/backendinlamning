@@ -33,6 +33,6 @@ client.connect((err) => {
     coursecode VARCHAR(40),
     coursename VARCHAR(50),
     syllabus VARCHAR(60),
-    progression VARCHAR(1)
+    progression VARCHAR(2)
   )
   `)

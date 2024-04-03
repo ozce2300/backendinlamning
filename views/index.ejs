@@ -44,7 +44,25 @@
         </header>
 
         <main>
-            
+            <div id="main-container">
+                <h2>Tillagda kurser</h2>
+                    <% courses.forEach ((course)=> { %>
+                        <ul id="ul-main">
+
+                      <li><strong>Kurskod: </strong><%= course.coursecode %></li>
+                        <li><strong>Kursnamn: </strong>
+                            <%= course.coursename %>
+                        </li>
+                        <li><strong>Länk: </strong>
+                            <%= course.syllabus %>
+                        </li>
+                        <li><strong>Progression: </strong>
+                            <%= course.progression %>
+                        </li>
+                    </ul>
+
+                        <% }); %>
+            </div>
         </main>
 
         <footer>

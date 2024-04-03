@@ -26,12 +26,37 @@ header {
 
 }
 
+#main-container {
+    margin: 10vh 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20PX;
+}
+
+#ul-main {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid green;
+    padding: 50px 200px;
+}
+
+#ul-main li {
+    margin-bottom: 10px;
+}
+
+#ul-main li strong {
+    display: inline-block;
+    width: 100px; /* justera bredden efter behov */
+}
+
 
 main {
     grid-area: m;
 }
 
-input {
+input, select{
     padding: 10px;
 }
 
@@ -51,6 +76,14 @@ input {
     margin-top:30px;
     display: flex;
     max-width: 800px;
+}
+
+#container-error {
+    margin-top:30px;
+    display: flex;
+    max-width: 800px;
+    justify-content: space-around;
+    color: red;
 }
 
 form {
