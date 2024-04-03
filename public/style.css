@@ -35,6 +35,18 @@ input {
     padding: 10px;
 }
 
+#submit {
+    margin-top: 10px;
+    background-color: green;
+    border-radius: 8px;
+    color: white;
+}
+
+#submit:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
 #container-form {
     margin-top:30px;
     display: flex;

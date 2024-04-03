@@ -43,6 +43,17 @@ client.connect((err) => {
     res.render("om");
   });
 
+  app.post("/", async(req, rest) => {
+
+    const coursecode = req.body.coursecode
+    const coursename = req.body.coursename
+    const syllabus = req.body.syllabus
+    const progression = req.body.progression
+
+    //SQL FRÅGA
+
+  });
+
   app.listen(process.env.DB_PORT, () => {
     console.log("Servern startad på port: " + process.env.DB_PORT)
   });
