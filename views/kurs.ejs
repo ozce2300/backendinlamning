@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1 class="logo"><a href="/">Backend</a></h1>
+            <!-- Meny knapp för att öppna mobilmenyn-->
+            <button class="menu-btn open" id="open-menu">
+                <span class="menu-icon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <span class="menu-text">Meny</span>
+            </button>
+            <!-- navigering -->
+            <nav id="nav-menu">
+                <!-- Knapp som visas om mobilmenyn är utfälld -->
+                <button class="menu-btn close" id="close-menu">
+                    <span class="menu-icon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menu-text">Stäng</span>
+                </button>
+                <ul>
+                    <li><a href="/">Hem</a></li>
+                    <li><a href="/kurs">Kurser</a></li>
+                    <li><a href="/om">Om oss</a></li>
+                </ul>
+            </nav>
+
+
+
+        </header>
+
+        <main>
+
+            <form method="post">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id">
+                <label for="coursecode">Coursecode:</label>
+                <input type="text" name="coursecode" id="coursecode">
+                <label for="coursename">Coursename:</label>
+                <input type="text" name="coursename" id="coursename">
+                <label for="syllabus">Länk:</label>
+                <input type="text" name="syllabus" id="syllabus">
+                <label for="progression">Progression:</label>
+                <input type="text" name="progression" id="progression">
+            </form>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
