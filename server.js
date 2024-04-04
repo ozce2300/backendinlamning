@@ -42,6 +42,10 @@ app.get("/", async (req, res) => {
 app.get("/kurs", async (req, res) => {
   res.render("kurs", {
     errors: [],
+    coursecode: "",
+    coursename: "",
+    syllabus: "",
+    progression: ""
   });
 });
 
@@ -73,6 +77,10 @@ app.post("/", async (req, res) => {
   if (errors.length > 0) {
     res.render("kurs", {
       errors: errors,
+      coursecode: coursecode,
+      coursename: coursename,
+      syllabus: syllabus,
+      progression: progression
     });
   } else {
     try {
@@ -86,6 +94,17 @@ app.post("/", async (req, res) => {
       console.error("Fel vid insättning av kurs:", error);
       res.status(500).send("Ett fel uppstod vid insättning av kurs.");
     }
+  }
+});
+
+app.post("/delete/:id", async (req, res) => {
+  const courseId = req.params.id;
+  try {
+    await client.query("DELETE FROM kurser WHERE id = $1", [courseId]);
+    res.redirect("/");
+  } catch (error) {
+    console.error("Fel vid radering av kurs:", error);
+    res.status(500).send("Ett fel uppstod vid radering av kurs.");
   }
 });
 

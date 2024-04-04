@@ -57,8 +57,14 @@
                             <%= course.syllabus %>
                         </li>
                         <li><strong>Progression: </strong>
-                            <%= course.progression %>
+                            <%= course.progression %> <br>
                         </li>
+                        <li>
+                            <form action="/delete/<%= course.id %>" method="POST">
+                            <button type="submit" id="radera">Radera</button>
+                            </form>
+                            </li>
+                        
                     </ul>
 
                         <% }); %>
