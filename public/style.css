@@ -54,6 +54,7 @@ header {
 
 main {
     grid-area: m;
+    font-size: 1em;
 }
 
 input, select{
