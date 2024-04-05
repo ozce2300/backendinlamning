@@ -46,28 +46,32 @@
         <main>
             <div id="main-container">
                 <h2>Tillagda kurser</h2>
-                    <% courses.forEach ((course)=> { %>
-                        <ul id="ul-main">
+                <% courses.forEach ((course)=> { %>
+                    <ul id="ul-main">
 
-                      <li><strong>Kurskod: </strong><%= course.coursecode %></li>
+                        <li><strong>Kurskod: </strong>
+                            <%= course.coursecode %>
+                        </li>
                         <li><strong>Kursnamn: </strong>
                             <%= course.coursename %>
-                        </li>
-                        <li><strong>Länk: </strong>
-                            <%= course.syllabus %>
                         </li>
                         <li><strong>Progression: </strong>
                             <%= course.progression %> <br>
                         </li>
+
+                        <li><strong>Länk: </strong>
+                          <a href="  <%= course.syllabus %> ">Länk till kursplan </a>
+                        </li>
+               
                         <li>
                             <form action="/delete/<%= course.id %>" method="POST">
-                            <button type="submit" id="radera">Radera</button>
+                                <button type="submit" id="radera">Radera</button>
                             </form>
-                            </li>
-                        
+                        </li>
+
                     </ul>
 
-                        <% }); %>
+                    <% }); %>
             </div>
         </main>
 

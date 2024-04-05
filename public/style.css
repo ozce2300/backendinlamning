@@ -39,6 +39,7 @@ header {
     list-style-type: none;
     padding: 0;
     border: 1px solid green;
+    padding: 1em;
 }
 
 #ul-main li {

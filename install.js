@@ -32,7 +32,7 @@ client.connect((err) => {
     id SERIAL PRIMARY KEY NOT NULL,
     coursecode VARCHAR(40),
     coursename VARCHAR(50),
-    syllabus VARCHAR(60),
-    progression VARCHAR(2)
+    syllabus VARCHAR(100),
+    progression VARCHAR(1)
   )
   `)
